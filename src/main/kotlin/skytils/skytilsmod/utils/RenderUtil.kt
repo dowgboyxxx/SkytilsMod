@@ -252,6 +252,10 @@ object RenderUtil {
         GlStateManager.enableDepth()
         GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0)
         Minecraft.getMinecraft().renderItem.renderItemAndEffectIntoGUI(itemStack, x, y)
+        GlStateManager.disableDepth()
+        GlStateManager.disableBlend()
+        GlStateManager.disableRescaleNormal()
+        RenderHelper.disableStandardItemLighting()
     }
 
     /**
